@@ -1,5 +1,4 @@
-## Sharpshooter
-
+<!-- Sharpshooter -->
 Did you ever tire of aiming fast-moving enemy?  
 Did you ever dream of becoming a legendary sniper that does not miss a single shot?  
 Did you deplete your ammo in the middle of a mission *again* due to poor ammo efficiency?  
@@ -45,11 +44,11 @@ And other detailed details that I failed to remember...
 
 ----------
 
-#TODO
-[ ] Hopefully you'll be able to use it with BLT hook.
-[ ] New shotgun ammo types
-[ ] Disable for bows/crossbows
-[ ] Check/Fix grenade launchers
+# TODO  
+[ ] Hopefully you'll be able to use it with BLT hook  
+[ ] New shotgun ammo types  
+[ ] Disable for bows/crossbows  
+[ ] Check/Fix grenade launchers  
 
 ----------
 Originally created by **ws793718** on unknowncheats.me and depending on PD2Hook.yml
