@@ -45,7 +45,7 @@ function FPCameraPlayerBase:chk_autoaim()
 		if not self._aim_assisting then
 			if managers.player:player_unit():movement():current_state():in_steelsight() or managers.player:player_unit():movement():current_state():_is_meleeing() or managers.player:player_unit():movement():tased() then
 				local dir = managers.player:player_unit():camera():forward()
-				if managers.player:player_unit():inventory():equipped_unit():base():weapon_tweak_data().category == "grenade_launcher" and self._gl_aiming then dir = self._gl_aiming end
+				if managers.player:player_unit():inventory():equipped_unit():base():weapon_tweak_data().category == 'grenade_launcher' and self._gl_aiming then dir = self._gl_aiming end
 				local closest_ray, feedback = managers.player:player_unit():inventory():equipped_unit():base():check_autoaim2(managers.player:player_unit():camera():position(), dir, managers.player:player_unit():movement():current_state():_is_meleeing())
 				if closest_ray then
 					local chase_running_target = false
@@ -73,7 +73,7 @@ function FPCameraPlayerBase:clbk_aim_assist(col_ray, chase_running_target)
 		mrotation.set_look_at(r2, ray, math.UP)
 		local target_yaw = mrotation.yaw(r2)
 		local target_pitch = mrotation.pitch(r2)
-		if managers.player:player_unit():inventory():equipped_unit():base():weapon_tweak_data().category == "grenade_launcher" then --Grenade launchers supported!
+		if managers.player:player_unit():inventory():equipped_unit():base():weapon_tweak_data().category == 'grenade_launcher' then --Grenade launchers supported!
 			local mypos = managers.player:player_unit():camera():position()
 			local target_pos = col_ray.position
 			if target_pos then 

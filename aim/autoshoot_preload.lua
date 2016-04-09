@@ -52,13 +52,13 @@ _fps_aim_assist_autoshoot = false
 
 local org_start_action_steelsight = PlayerStandard._start_action_steelsight
 function PlayerStandard:_start_action_steelsight(t)
-	if managers.player:player_unit():inventory():equipped_unit():base():weapon_tweak_data().category == "grenade_launcher" then --Auto correct pitch angle Disable it if you don't like it.
+	if managers.player:player_unit():inventory():equipped_unit():base():weapon_tweak_data().category == 'grenade_launcher' then --Auto correct pitch angle Disable it if you don't like it.
 		local from_pos = managers.player:player_unit():camera():position()
 		local tar_vec = Vector3()
 		mvector3.set(tar_vec, managers.player:player_unit():camera():forward())
 		mvector3.multiply(tar_vec, 40000)
 		mvector3.add(tar_vec, from_pos)
-		local vis_ray = World:raycast("ray", from_pos, tar_vec, "slot_mask", managers.slot:get_mask( "bullet_impact_targets" ))
+		local vis_ray = World:raycast('ray', from_pos, tar_vec, 'slot_mask', managers.slot:get_mask( 'bullet_impact_targets' ))
 		if vis_ray then
 			managers.player:player_unit():camera():camera_unit():base():clbk_aim_assist(vis_ray)
 		end

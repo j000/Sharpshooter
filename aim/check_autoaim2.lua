@@ -40,7 +40,7 @@ function RaycastWeaponBase:check_autoaim2(from_pos, direction, melee)
 	local ignore_units = self._setup.ignore_units
 	local slotmask = self._bullet_slotmask
 	local enemies = managers.enemy:all_enemies()
-	local can_engage_shield = ((self._can_shoot_through_shield or self._bullet_class ~= InstantBulletBase or self:weapon_tweak_data().category == "grenade_launcher") and not melee) or (managers.player:has_category_upgrade("player", "shield_knock") and melee)
+	local can_engage_shield = ((self._can_shoot_through_shield or self._bullet_class ~= InstantBulletBase or self:weapon_tweak_data().category == 'grenade_launcher') and not melee) or (managers.player:has_category_upgrade('player', 'shield_knock') and melee)
 	local largest_error_dot
 	local best_target
 	local target_weight
@@ -74,7 +74,7 @@ function RaycastWeaponBase:check_autoaim2(from_pos, direction, melee)
 		target_weight = false --The less weight a target is, the more threatening it is
 		if not alive(enemy_data.unit) then 
 		elseif enemy:base():lod_stage() ~= 1 then 
-		elseif enemy:base():char_tweak().access == "teamAI4" then 
+		elseif enemy:base():char_tweak().access == 'teamAI4' then 
 		elseif enemy:movement():team() == managers.player:player_unit():movement():team() or enemy:anim_data().hands_tied then
 		else
 			if self._bullet_class ~= InstantBulletBase and not melee then
@@ -99,7 +99,7 @@ function RaycastWeaponBase:check_autoaim2(from_pos, direction, melee)
 			if (math.cos(finding_angle) < error_dot) or (not need_angle_check) then
 				mvector3.multiply(tar_vec, max_dis)
 				mvector3.add(tar_vec, from_pos)
-				local vis_ray = World:raycast("ray", from_pos, tar_vec, "slot_mask", slotmask, "ignore_unit", ignore_units)
+				local vis_ray = World:raycast('ray', from_pos, tar_vec, 'slot_mask', slotmask, 'ignore_unit', ignore_units)
 				if vis_ray then
 					if vis_ray.unit:in_slot(8) then --Shield
 						if not alive(vis_ray.unit:parent()) then
@@ -111,7 +111,7 @@ function RaycastWeaponBase:check_autoaim2(from_pos, direction, melee)
 							target_weight = math.sin((math.acos(error_dot) * 0.5) * 2) * dis
 							target_weight = target_weight * target_weight
 							if (not best_target or best_target > target_weight) or (target_dis > last_cmp_eff_dis and dis <= test_eff_dis) then
-								if self:weapon_tweak_data().category == "grenade_launcher" and not melee then
+								if self:weapon_tweak_data().category == 'grenade_launcher' and not melee then
 									mvector3.set(vis_ray.ray, enemy:position())
 									mvector3.subtract(vis_ray.ray, from_pos)
 									mvector3.normalize(vis_ray.ray)
@@ -130,8 +130,8 @@ function RaycastWeaponBase:check_autoaim2(from_pos, direction, melee)
 					elseif vis_ray.unit:key() == u_key then
 						target_weight = math.sin((math.acos(error_dot) * 0.5) * 2) * dis
 						target_weight = target_weight * target_weight
-						if (not best_target or best_target > target_weight) or (target_dis > effective_dis and dis <= effective_dis and vis_ray.unit:base()._tweak_table ~= "sniper") then --Aiming snipers is not affected by "effective distance"
-							if self:weapon_tweak_data().category == "grenade_launcher" and not melee then
+						if (not best_target or best_target > target_weight) or (target_dis > effective_dis and dis <= effective_dis and vis_ray.unit:base()._tweak_table ~= 'sniper') then --Aiming snipers is not affected by 'effective distance'
+							if self:weapon_tweak_data().category == 'grenade_launcher' and not melee then
 								mvector3.set(vis_ray.ray, enemy:position())
 								mvector3.subtract(vis_ray.ray, from_pos)
 								mvector3.normalize(vis_ray.ray)
@@ -143,7 +143,7 @@ function RaycastWeaponBase:check_autoaim2(from_pos, direction, melee)
 							target_dis = dis
 							feedback_eff_dis = effective_dis
 							feedback_target_running = target_running
-							is_sniper = vis_ray.unit:base()._tweak_table == "sniper"
+							is_sniper = vis_ray.unit:base()._tweak_table == 'sniper'
 						end
 					end
 				end
@@ -154,5 +154,7 @@ function RaycastWeaponBase:check_autoaim2(from_pos, direction, melee)
 	return closest_ray, { error_dot = largest_error_dot, dis = target_dis, effective_dis = feedback_eff_dis, is_running = feedback_target_running, is_sniper = is_sniper }
 end
 
-function RaycastWeaponBase:check_autoaim2_no_angle_check_enemies_insert(enemy_key) table.insert(self._no_angle_check_enemies, enemy_key) end
+function RaycastWeaponBase:check_autoaim2_no_angle_check_enemies_insert(enemy_key)
+	table.insert(self._no_angle_check_enemies, enemy_key)
+end
 
