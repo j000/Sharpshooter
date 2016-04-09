@@ -45,10 +45,12 @@ And other detailed details that I failed to remember...
 ----------
 
 # TODO  
-[ ] Hopefully you'll be able to use it with BLT hook  
+[x] Hopefully you'll be able to use it with BLT hook  
+[ ] Make it work fully in current game code (update 97.3)  
 [ ] New shotgun ammo types  
 [ ] Disable for bows/crossbows  
 [ ] Check/Fix grenade launchers  
+[ ] Support turrets  
 
 ----------
 Originally created by **ws793718** on unknowncheats.me and depending on PD2Hook.yml
