@@ -1,4 +1,3 @@
-
 --[[
 File name : check_autoaim2.lua
 

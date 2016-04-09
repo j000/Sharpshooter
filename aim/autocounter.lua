@@ -1,4 +1,3 @@
-
 --[[
 File name : autocounter.lua
 

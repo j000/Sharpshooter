@@ -1,4 +1,3 @@
-
 --[[
 File name : autoshoot.lua
 
