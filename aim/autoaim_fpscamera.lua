@@ -3,7 +3,7 @@
 File name : autoaim_fpscamera.lua
 
 PostRequireScripts:
-  - [lib/units/cameras/fpcameraplayerbase, aim\autoaim_fpscamera.lua]
+  - [lib/units/cameras/fpcameraplayerbase, aim/autoaim_fpscamera.lua]
   
 Current v1.6.1
 

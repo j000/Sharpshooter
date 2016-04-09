@@ -3,7 +3,7 @@
 File name : autoshoot.lua
 
 KeyBindings:
-  - [Z, aim\autoshoot.lua]
+  - [Z, aim/autoshoot.lua]
   
 Current v1.0
 

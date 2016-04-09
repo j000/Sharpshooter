@@ -1,0 +1,37 @@
+{
+	"name": "Sharpshooter",
+	"author": "j000",
+	"contact": "Aims and shoots for you",
+	"version": "v1.7",
+	"priority": 10,
+	"hooks": [{
+		"hook_id": "lib/units/cameras/fpcameraplayerbase",
+		"script_path": "aim/autoaim_fpscamera.lua"
+	}, {
+		"hook_id": "lib/units/beings/player/playerdamage",
+		"script_path": "aim/autocounter.lua"
+	}, {
+		"hook_id": "lib/units/beings/player/states/playerstandard",
+		"script_path": "aim/autoshoot_preload.lua"
+	}, {
+		"hook_id": "lib/units/weapons/RaycastWeaponBase",
+		"script_path": "aim/check_autoaim2.lua"
+	}],
+	"keybinds": [{
+		"keybind_id": "keybind_autoaim",
+		"name": "Autoaim",
+		"description": "Toggle Autoaim",
+		"script_path": "aim/autoaim.lua",
+		"run_in_menu": false,
+		"run_in_game": true,
+		"localized": false
+	}, {
+		"keybind_id": "keybind_autoshoot",
+		"name": "Autoshoot",
+		"description": "Toggle Autoshoot",
+		"script_path": "aim/autoshoot.lua",
+		"run_in_menu": false,
+		"run_in_game": true,
+		"localized": false
+	}]
+}

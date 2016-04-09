@@ -3,7 +3,7 @@
 File name : autocounter.lua
 
 PostRequireScripts:
-  - [lib/units/beings/player/playerdamage, aim\autocounter.lua]
+  - [lib/units/beings/player/playerdamage, aim/autocounter.lua]
   
 Current v1.0
 

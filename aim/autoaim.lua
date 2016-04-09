@@ -3,7 +3,7 @@
 File name : autoaim.lua
 
 KeyBindings:
-  - [B, aim\autoaim.lua]
+  - [B, aim/autoaim.lua]
   
 Current v1.2
 

@@ -3,7 +3,7 @@
 File name : check_autoaim2.lua
 
 PostRequireScripts:
-  - [lib/units/weapons/RaycastWeaponBase, aim\check_autoaim2.lua]
+  - [lib/units/weapons/RaycastWeaponBase, aim/check_autoaim2.lua]
   
 Current v1.5.1
 

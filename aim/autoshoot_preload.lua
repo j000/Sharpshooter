@@ -3,7 +3,7 @@
 File name : autoshoot_preload.lua
 
 PostRequireScripts:
-  - [lib/units/beings/player/states/playerstandard, aim\autoshoot_preload.lua]
+  - [lib/units/beings/player/states/playerstandard, aim/autoshoot_preload.lua]
   
 Current v1.0
 
