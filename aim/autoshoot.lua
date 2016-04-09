@@ -12,7 +12,10 @@ Change log :
 --]]
 
 --Turn it off when it bugs
-if not _fps_aim_assist then return end
+if not _fps_aim_assist then
+	return
+end
 _fps_aim_assist_autoshoot = not _fps_aim_assist_autoshoot
-managers.hud:show_hint({text = "Auto shoot (".. tostring(_fps_aim_assist_autoshoot) ..")"})
+--managers.hud:show_hint({text = "Auto shoot (".. tostring(_fps_aim_assist_autoshoot) ..")"})
+managers.chat:_receive_message(1, "AUTOSHOOT", _fps_aim_assist_autoshoot and 'ON' or 'OFF', tweak_data.system_chat_color)
 
