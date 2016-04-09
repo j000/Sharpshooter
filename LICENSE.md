@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) 2016: ws793718, [j000](https://github.com/j000) and [other contributors](https://github.com/j000/Sharpshooter-pack/graphs/contributors)
+Copyright (c) 2016: ws793718, [j000](https://github.com/j000) and [other contributors](https://github.com/j000/Sharpshooter/contributors)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

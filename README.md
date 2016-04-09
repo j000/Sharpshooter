@@ -1,15 +1,15 @@
-## Sharpshooter's pack for *Payday 2*
+## Sharpshooter
 
 Did you ever tire of aiming fast-moving enemy?  
 Did you ever dream of becoming a legendary sniper that does not miss a single shot?  
 Did you deplete your ammo in the middle of a mission *again* due to poor ammo efficiency?  
 **My solution is:**
 
-# Sharpshooter's pack
+# Sharpshooter bot for *Payday 2*
 
 ### What do those scripts do:
 
-Make your aiming job very easy - ~~just press "B" key (first) and "Z" key (second)~~.  
+Make your aiming job very easy - just press "B" key (first) and "Z" key (second).  
 Press right mouse button, wait for it to search for the best target and pull the trigger.  
 All you need to do is to watch the show!  
 
@@ -20,7 +20,7 @@ Enjoy!
 
 ### Detailed feature description:
 
-This mod, actually the head hunting mod, will find the best head for you if your are using "regular" bullets. As for your shotguns with explosive ammo loaded, center of the body is the most desirable position.
+This bot, actually the head hunting mod, will find the best head for you if your are using "regular" bullets. As for your shotguns with explosive ammo loaded, center of the body is the most desirable position.
 
 When you are trying to strike an enemy with your melee weapon and there is a possible hit, it will guide you to aim his head, too.
 
@@ -45,7 +45,11 @@ And other detailed details that I failed to remember...
 
 ----------
 
-Hopefully you'll be able to use it with BLT hook.
+#TODO
+[ ] Hopefully you'll be able to use it with BLT hook.
+[ ] New shotgun ammo types
+[ ] Disable for bows/crossbows
+[ ] Check/Fix grenade launchers
 
 ----------
 Originally created by **ws793718** on unknowncheats.me and depending on PD2Hook.yml
