@@ -41,18 +41,6 @@ Counter attack feature. If an enemy attacked from right behind your back, there 
 Feel free to edit values inside those files to what you want!
 
 And other detailed details that I failed to remember...
-
 ----------
-
-# TODO  
-[x] Hopefully you'll be able to use it with BLT hook  
-[ ] Make it work fully in current game code (update 97.3)  
-[ ] New shotgun ammo types  
-[ ] Disable for bows/crossbows  
-[ ] Check/Fix grenade launchers  
-[ ] Support turrets  
-
-----------
-Originally created by **ws793718** on unknowncheats.me and depending on PD2Hook.yml
-
+Originally created by **ws793718** on unknowncheats.me and depending on PD2Hook.yml  
 http://www.unknowncheats.me/forum/payday-2-a/133362-sharpshooters-lua-pack.html
