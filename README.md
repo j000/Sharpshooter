@@ -8,14 +8,18 @@ Did you deplete your ammo in the middle of a mission *again* due to poor ammo ef
 
 ### What do those scripts do:
 
-Make your aiming job very easy - just press "B" key (first) and "Z" key (second).  
-Press right mouse button, wait for it to search for the best target and pull the trigger.  
-All you need to do is to watch the show!  
+Make your aiming job very easy - just press autoaim key and then autoshoot key (bind both in options).  
+You just press right mouse button, it will search for the best target and pull the trigger.  
+Enjoy the show!  
 
 ### Installation guide:
 
-Edit your "PD2Hook.yml" according to the header of each file.  
-Enjoy!
+**This mod requires BLT-hook to work.**
+
+1. Download [latest release](https://github.com/j000/Sharpshooter/zipball/v1.7)  
+2. Unpack into *mods* folder
+3. Bind keys in main menu
+4. Enjoy!
 
 ### Detailed feature description:
 
@@ -34,13 +38,14 @@ Effective distance is one of the features. It lets you make good use of your amm
 For those inaccurate weapons(e.g. SMG, shotgun...) will aim "far" targets but not auto-shoot them EVEN IF you have auto-shoot toggle on (except for aiming snipers), because their "effective distance" is limited.
 (If you have really made up your mind to destroy the "far" target, you may just waste your own ammo.)
 
-~~New~~ experience of using GL40 (try it, you probably like it)!
+Separate experience of using GL40 (try it, you probably like it)!
 
 Counter attack feature. If an enemy attacked from right behind your back, there is almost no chance that he fires second time.
 
 Feel free to edit values inside those files to what you want!
 
-And other detailed details that I failed to remember...
+And other detailed details that I failed to remember...  
+
 ----------
 Originally created by **ws793718** on unknowncheats.me and depending on PD2Hook.yml  
 http://www.unknowncheats.me/forum/payday-2-a/133362-sharpshooters-lua-pack.html
