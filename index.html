@@ -30,7 +30,7 @@
         <div class="download-bar">
         <div class="inner">
           <a href="https://github.com/j000/Sharpshooter/tarball/master" class="download-button tar"><span>Download</span></a>
-          <a href="https://github.com/j000/Sharpshooter/zipball/master" class="download-button zip" id="download"><span>Download</span></a>
+          <a href="https://github.com/j000/Sharpshooter/zipball/master" class="download-button zip download_latest"><span>Download</span></a>
           <a href="https://github.com/j000/Sharpshooter" class="code">View Sharpshooter on GitHub</a>
         </div>
         <span class="blc"></span><span class="trc"></span>
@@ -60,8 +60,7 @@ Enjoy the show!  </p>
 <p><strong>This mod requires BLT-hook to work.</strong></p>
 
 <ol>
-<li>Download <a href="https://github.com/j000/Sharpshooter/zipball/v1.7">latest release</a><br>
-</li>
+<li>Download <a href="https://github.com/j000/Sharpshooter/zipball/v1.7" class="download_latest">latest release</a></li>
 <li>Unpack into <em>mods</em> folder</li>
 <li>Bind keys in main menu</li>
 <li>Enjoy!</li>
@@ -113,14 +112,13 @@ Enjoy the show!  </p>
   </div>
   <div class="current-section">
     <a href="#top">Scroll to top</a>
-    <a href="https://github.com/j000/Sharpshooter/tarball/master" class="tar">tar</a><a href="https://github.com/j000/Sharpshooter/zipball/master" class="zip" id="download2">zip</a><a href="" class="code">source code</a>
+    <a href="https://github.com/j000/Sharpshooter/tarball/master" class="tar">tar</a><a href="https://github.com/j000/Sharpshooter/zipball/master" class="zip download_latest">zip</a><a href="" class="code">source code</a>
     <p class="name"></p>
   </div>
 
 <script>
 $.get('https://api.github.com/repos/j000/Sharpshooter/releases/latest', function (data) {
-  $('#download').attr('href', data.zipball_url);
-  $('#download2').attr('href', data.zipball_url);
+  $('.download_latest').attr('href', data.zipball_url);
 });
 </script>
   
