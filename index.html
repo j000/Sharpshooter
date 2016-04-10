@@ -30,7 +30,7 @@
         <div class="download-bar">
         <div class="inner">
           <a href="https://github.com/j000/Sharpshooter/tarball/master" class="download-button tar"><span>Download</span></a>
-          <a href="https://github.com/j000/Sharpshooter/zipball/master" class="download-button zip"><span>Download</span></a>
+          <a href="https://github.com/j000/Sharpshooter/zipball/master" class="download-button zip" id="download"><span>Download</span></a>
           <a href="https://github.com/j000/Sharpshooter" class="code">View Sharpshooter on GitHub</a>
         </div>
         <span class="blc"></span><span class="trc"></span>
@@ -113,10 +113,16 @@ Enjoy the show!  </p>
   </div>
   <div class="current-section">
     <a href="#top">Scroll to top</a>
-    <a href="https://github.com/j000/Sharpshooter/tarball/master" class="tar">tar</a><a href="https://github.com/j000/Sharpshooter/zipball/master" class="zip">zip</a><a href="" class="code">source code</a>
+    <a href="https://github.com/j000/Sharpshooter/tarball/master" class="tar">tar</a><a href="https://github.com/j000/Sharpshooter/zipball/master" class="zip" id="download2">zip</a><a href="" class="code">source code</a>
     <p class="name"></p>
   </div>
 
+<script>
+$.get('https://api.github.com/repos/j000/Sharpshooter/releases/latest', function (data) {
+  $('#download').attr('href', data.zipball_url);
+  $('#download2').attr('href', data.zipball_url);
+});
+</script>
   
 </body>
 </html>
