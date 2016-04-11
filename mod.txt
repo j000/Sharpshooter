@@ -1,7 +1,7 @@
 {
 	"name": "Sharpshooter",
 	"author": "j000",
-	"contact": "Aims and shoots for you",
+	"description": "Aims and shoots for you",
 	"version": "v1.7",
 	"priority": 10,
 	"hooks": [{
