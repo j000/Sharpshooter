@@ -18,7 +18,7 @@
 		"script_path": "aim/check_autoaim2.lua"
 	}],
 	"keybinds": [{
-		"keybind_id": "keybind_autoaim",
+		"keybind_id": "sharpshooter_autoaim",
 		"name": "Autoaim",
 		"description": "Toggle Autoaim",
 		"script_path": "aim/autoaim.lua",
@@ -26,7 +26,7 @@
 		"run_in_game": true,
 		"localized": false
 	}, {
-		"keybind_id": "keybind_autoshoot",
+		"keybind_id": "sharpshooter_autoshoot",
 		"name": "Autoshoot",
 		"description": "Toggle Autoshoot",
 		"script_path": "aim/autoshoot.lua",
