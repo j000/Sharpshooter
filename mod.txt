@@ -18,6 +18,14 @@
 		"script_path": "aim/check_autoaim2.lua"
 	}],
 	"keybinds": [{
+		"keybind_id": "sharpshooter_debug",
+		"name": "Debug",
+		"description": "",
+		"script_path": "aim/debug.lua",
+		"run_in_menu": false,
+		"run_in_game": true,
+		"localized": false
+	}, {
 		"keybind_id": "sharpshooter_autoaim",
 		"name": "Autoaim",
 		"description": "Toggle Autoaim",
