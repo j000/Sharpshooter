@@ -65,13 +65,14 @@ function RaycastWeaponBase:check_autoaim2(from_pos, direction, melee)
 		local no_angle_check_enemy_idx
 		need_angle_check = true
 		for idx, data in pairs(self._no_angle_check_enemies) do --Counter attack
-			if not enemies[data] then table.remove(self._no_angle_check_enemies, idx) --The enemy is dead
+			if not enemies[data] then
+				table.remove(self._no_angle_check_enemies, idx) --The enemy is dead
 			elseif data == enemy:key() then
 				need_angle_check = false --The enemy attacked you before.
 				no_angle_check_enemy_idx = idx
 			end
 		end
-		target_weight = false --The less weight a target is, the more threatening it is
+		target_weight = 0 --The less weight a target is, the more threatening it is
 		if not alive(enemy_data.unit) then 
 		elseif enemy:base():lod_stage() ~= 1 then 
 		elseif enemy:base():char_tweak().access == 'teamAI4' then 
@@ -96,7 +97,7 @@ function RaycastWeaponBase:check_autoaim2(from_pos, direction, melee)
 			elseif dis < 2000 then finding_angle = 30 end
 			error_dot = mvector3.dot(direction, tar_vec)
 			if error_dot > 1 then error_dot = 1 end
-			if (math.cos(finding_angle) < error_dot) or (not need_angle_check) then
+			if ((not need_angle_check) or (math.cos(finding_angle) < error_dot)) then
 				mvector3.multiply(tar_vec, max_dis)
 				mvector3.add(tar_vec, from_pos)
 				local vis_ray = World:raycast('ray', from_pos, tar_vec, 'slot_mask', slotmask, 'ignore_unit', ignore_units)
@@ -149,7 +150,9 @@ function RaycastWeaponBase:check_autoaim2(from_pos, direction, melee)
 				end
 			end
 		end
-		if not target_weight and not need_angle_check then table.remove(self._no_angle_check_enemies, no_angle_check_enemy_idx) end --Can not aim the enemy, remove it.
+		if (not target_weight) and (not need_angle_check) then --Can not aim the enemy, remove it.
+			table.remove(self._no_angle_check_enemies, no_angle_check_enemy_idx)
+		end
 	end
 	return closest_ray, { error_dot = largest_error_dot, dis = target_dis, effective_dis = feedback_eff_dis, is_running = feedback_target_running, is_sniper = is_sniper }
 end
@@ -157,4 +160,3 @@ end
 function RaycastWeaponBase:check_autoaim2_no_angle_check_enemies_insert(enemy_key)
 	table.insert(self._no_angle_check_enemies, enemy_key)
 end
-
