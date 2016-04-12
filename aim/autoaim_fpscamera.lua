@@ -36,9 +36,6 @@ end
 function FPCameraPlayerBase:chk_autoaim()
 	if _fps_aim_assist then
 		if not self._aim_assisting then
-			if managers.player:player_unit():movement():tased() then
-				managers.chat:_receive_message(1, 'Sharpshooter', '/!\\ Tased /!\\', tweak_data.system_chat_color)
-			end
 			if managers.player:player_unit():movement():current_state():in_steelsight() or managers.player:player_unit():movement():current_state():_is_meleeing() or managers.player:player_unit():movement():tased() then
 				local dir = managers.player:player_unit():camera():forward()
 				if managers.player:player_unit():inventory():equipped_unit():base():weapon_tweak_data().category == 'grenade_launcher' and self._gl_aiming then dir = self._gl_aiming end
