@@ -91,10 +91,13 @@ function RaycastWeaponBase:check_autoaim2(from_pos, direction, melee)
 			end
 			mvector3.set(tar_vec, com)
 			mvector3.subtract(tar_vec, from_pos)
-			local finding_angle = 20 --degree
 			local dis = mvector3.normalize(tar_vec)
-			if dis < 750 then finding_angle = 180 --cm / degree
-			elseif dis < 2000 then finding_angle = 30 end
+			local finding_angle = 15 --degree
+			if dis < 750 then
+				finding_angle = 90 --cm / degree
+			elseif dis < 2000 then
+				finding_angle = 30
+			end
 			error_dot = mvector3.dot(direction, tar_vec)
 			if error_dot > 1 then error_dot = 1 end
 			if ((not need_angle_check) or (math.cos(finding_angle) < error_dot)) then
