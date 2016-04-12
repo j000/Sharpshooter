@@ -1,5 +1,6 @@
 # TODO  
 - [x] Work with BLT hook  
+- [ ] Work while bleeding out  
 - [ ] Don't aim at jokers (converted cops)  
 - [ ] Work fully in current game code (update 97.3)  
   - [ ] counterattack / being tased (same issue)  
