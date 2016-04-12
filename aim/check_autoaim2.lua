@@ -1,11 +1,4 @@
 --[[
-File name : check_autoaim2.lua
-
-PostRequireScripts:
-  - [lib/units/weapons/RaycastWeaponBase, aim/check_autoaim2.lua]
-  
-Current v1.5.1
-
 Change log :
 	v1.5.1
 		Fixed a crash when playing as a client.

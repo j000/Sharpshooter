@@ -1,15 +1,3 @@
---[[
-File name : autoshoot_preload.lua
-
-PostRequireScripts:
-  - [lib/units/beings/player/states/playerstandard, aim/autoshoot_preload.lua]
-  
-Current v1.0
-
-Change log :
-	v1.0
-		Add support for auto-shoot.
---]]
 
 local org_check_action_primary_attack = PlayerStandard._check_action_primary_attack
 function PlayerStandard:_check_action_primary_attack(t, input)
