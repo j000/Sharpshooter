@@ -1,3 +1,4 @@
+_fps_aim_assist_autoshoot = false
 
 local org_check_action_primary_attack = PlayerStandard._check_action_primary_attack
 function PlayerStandard:_check_action_primary_attack(t, input)
@@ -35,8 +36,6 @@ function PlayerStandard:_check_action_primary_attack(t, input)
 	end
 	return org_check_action_primary_attack(self, t, input)
 end
-
-_fps_aim_assist_autoshoot = false
 
 local org_start_action_steelsight = PlayerStandard._start_action_steelsight
 function PlayerStandard:_start_action_steelsight(t)
