@@ -4,16 +4,8 @@ local org_check_action_primary_attack = PlayerStandard._check_action_primary_att
 function PlayerStandard:_check_action_primary_attack(t, input)
 	if _fps_aim_assist then
 		local feedback
-		if managers then
-			if managers.player then
-				if managers.player:player_unit() then
-					if managers.player:player_unit():camera() then
-						if managers.player:player_unit():camera():camera_unit() then
-							feedback = managers.player:player_unit():camera():camera_unit():base():chk_autoaim()
-						end
-					end
-				end
-			end
+		if managers and managers.player and managers.player:player_unit() and managers.player:player_unit():camera() and managers.player:player_unit():camera():camera_unit() then
+			feedback = managers.player:player_unit():camera():camera_unit():base():chk_autoaim()
 		end
 		if not _fps_aim_assist_autoshoot then
 		elseif not feedback then
@@ -24,7 +16,7 @@ function PlayerStandard:_check_action_primary_attack(t, input)
 				input.btn_primary_attack_state = true
 				input.btn_primary_attack_press = true
 			else
-				if (feedback.dis > feedback.effective_dis) and (not feedback.is_sniper) then
+				if (not feedback.is_sniper) and (feedback.dis > feedback.effective_dis) then
 				elseif error_dis <= 11.0 or (feedback.is_running and error_dis <= 17.5) then
 					input.btn_primary_attack_state = true
 					input.btn_primary_attack_press = true
