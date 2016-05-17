@@ -9,7 +9,7 @@
 		"script_path": "aim/autoaim_fpscamera.lua"
 	}, {
 		"hook_id": "lib/units/beings/player/playerdamage",
-		"script_path": "aim/autocounter.lua"
+		"script_path": "aim/autocounter_playerdamage.lua"
 	}, {
 		"hook_id": "lib/units/beings/player/states/playerstandard",
 		"script_path": "aim/autoshoot_preload.lua"
