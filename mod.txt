@@ -41,5 +41,13 @@
 		"run_in_menu": false,
 		"run_in_game": true,
 		"localized": false
+	}, {
+		"keybind_id": "sharpshooter_autocounter",
+		"name": "Autocounter",
+		"description": "Toggle Autocounter",
+		"script_path": "aim/autocounter.lua",
+		"run_in_menu": false,
+		"run_in_game": true,
+		"localized": false
 	}]
 }
